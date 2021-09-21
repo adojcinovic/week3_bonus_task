@@ -18,51 +18,59 @@ body {
     font-family: 'Kumbh Sans', sans-serif;
 }
 
-
 @media only screen and (max-width: 812px) {
+    body {
+        height: 100%;
+    }
+    .img {
+        position: absolute;
+        background-image: url(./images/illustration-woman-online-mobile.svg), url(./figma/top_box_mobile.svg);
+        background-repeat: no-repeat;
+        background-position: center, 100% 90%;
+
+        width: 266px;
+        height: 250px;
+        top: -137px;
+        left: -19px;
+        right: 0;
+        margin: 0 auto;
+    }
     .card {
+        display: flex;
+        justify-content: center;
         position: relative;
         width: 80%;
-        height: 70%;
         background-color: white;
         box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
         border-radius: 23px;
+        margin-top: 150px;
+        margin-bottom: 100px;
+        padding: 15px;
     }
     .left_side{
         display: none;
     }
-    .shadow_box {
-        margin: 0 auto;
-        position: absolute;
-        top: 8%;
-        left: 0;
-        right: 0;
-    }
-    .woman_mobile {
-        position: absolute;
-        margin: 0 auto;
-        top: -10%;
-        left: -2em;
-        right: 0;
-    }
+
 
     .right_side {
-        position: absolute;
+        position: static;
         left: 11%;
         top: 31%;
-        min-width: 80%;
+        width: 100%;
         height: auto;
         min-height: 70vh;
+        padding-top: 90px;
+        padding-bottom: 20px;
+    }
+    .faq {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+        padding: 5px;
     }
 }
 
 
-.faq {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    padding: 5px;
-}
 
 
 @media only screen and (min-width: 813px) {
@@ -123,6 +131,10 @@ body {
         width: 40%;
         display: flex;
         flex-direction: column;
+    }
+    .faq {
+        font-size: 32px;
+        font-weight: 700;
     }
 }
 
