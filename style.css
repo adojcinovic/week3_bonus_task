@@ -7,142 +7,168 @@
 body {
     position: relative;
     background: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
+    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     padding: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.card {
-    position: relative;
-    width: 63%;
-    height: 60%;
-    background-color: white;
-    box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
-    border-radius: 23px;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 
 
-
-
-@media screen and (min-width: 378px) {
-    .woman_mobile, .shadow_box {
+@media only screen and (max-width: 812px) {
+    .card {
+        position: relative;
+        width: 80%;
+        height: 70%;
+        background-color: white;
+        box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+        border-radius: 23px;
+    }
+    .left_side{
         display: none;
-    }  
-}
-
-
-@media screen and (max-width: 377px) {
+    }
     .shadow_box {
         margin: 0 auto;
         position: absolute;
+        top: 8%;
         left: 0;
         right: 0;
     }
     .woman_mobile {
         position: absolute;
         margin: 0 auto;
-        top: -22%;
+        top: -10%;
         left: -2em;
         right: 0;
     }
-    .left_side{
-        display: none;
-    }
-    .card {
-        width: 90%;
-    }
+
     .right_side {
         position: absolute;
-        left: 15%;
-        top: 24%;
+        left: 11%;
+        top: 31%;
         min-width: 80%;
-    }
-    .faq {
-        text-align: center;
+        height: auto;
+        min-height: 70vh;
     }
 }
 
-.woman_desktop {
-    position: absolute;
-    bottom: 14%;
-    z-index: 1;
-    width: 45%;;
-}
-.shadow_box_desktop {
-    position: absolute;
-    width: 45%;
-    bottom: -60px;
-    left: 0;
-    z-index: 1;
-}
-.top_ring {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    width: 45%;
-}
-.bottom_ring {
-    position: absolute;
-    z-index: 0;
-    width: 45%;
-}
-.at_box {
-    position: absolute;
-    left: -5%;
-    width: 15%;
-    bottom: 28%;
-    z-index: 1;
-}
-
-.right_side {
-    position: absolute;
-    right: 3%;
-    top: 23%;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-size: 12px;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-}
 
 .faq {
+    text-align: center;
     font-size: 32px;
     font-weight: 700;
     padding: 5px;
 }
+
+
+@media only screen and (min-width: 813px) {
+    .card {
+        position: relative;
+        width: 63%;
+        height: 60%;
+        background-color: white;
+        box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+        border-radius: 23px;
+    }
+    
+    .shadow_box {
+        display: none;
+    }
+
+    .woman_mobile {
+        display: none;
+    }
+
+    .woman_desktop {
+        position: absolute;
+        bottom: 14%;
+        z-index: 1;
+        width: 45%;;
+    }
+    .shadow_box_desktop {
+        position: absolute;
+        width: 45%;
+        bottom: -60px;
+        left: 0;
+        z-index: 1;
+    }
+    .top_ring {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 45%;
+    }
+    .bottom_ring {
+        position: absolute;
+        z-index: 0;
+        width: 45%;
+    }
+    .at_box {
+        position: absolute;
+        left: -5%;
+        width: 15%;
+        bottom: 28%;
+        z-index: 1;
+    }
+    .right_side {
+        position: absolute;
+        right: 3%;
+        top: 18%;
+        font-size: 12px;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
 
 span {
     cursor: pointer;
 }
 
 .question {
-    padding: 5px;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    color: #787887;
+    font-size: 12px;
 }
+
+.hidden .question:hover, .bottom_border .question:hover{
+    color: orange;
+    font-weight: 400;
+}
+
 .answer {
-    padding: 5px;
+    padding-bottom: 10px;
+    display: none;
+    color: #787887;
+    font-size: 12px;
+}
+
+.selected-div, .hidden, .bottom_border {
+    border-bottom: hsl(240, 5%, 91%) solid 1px;
+}
+
+.hidden .answer{
     display: none;
 }
 
-.bottom_border {
-    border-bottom: hsl(240, 5%, 91%) solid 1px;
+.selected-div p {
+    font-weight: bold;
+    color: black;
 }
-.visible {
-    display: block;
-    padding: 5px;
-}
-.hidden {
-    display: none;
-}
-.rotate {
+.selected-div span {
     transform: rotate(180deg);
 }
-.bold {
-    font-weight: bold;
+.selected-div .answer {
+    display: block;
 }

@@ -1,18 +1,15 @@
-var arrow1 = document.getElementById('arrow1')
 var first = document.getElementById('first')
-var firstAnswer = document.getElementById('one')
-var question1 = document.getElementById('question1')
+var second = document.getElementById('second')
+var third = document.getElementById('third')
+var fourth = document.getElementById('fourth')
+var fifth = document.getElementById('fifth')
 
-console.log(firstAnswer);
+var array = [first, second, third, fourth, fifth]
 
-console.log(arrow1);
-var flag = true
-
-first.addEventListener('click', () => {
-    flag ? firstAnswer.className = 'visible' : firstAnswer.className = 'hidden';
-    flag ? arrow1.className = 'rotate' : arrow1.className = '';
-    flag ? question1.className = 'bold' : question1.className = ''
-    flag = !flag
-    console.log(flag);
+array.forEach((e) => {
+    var flag = true
+    e.addEventListener('click', () => {
+        flag ? e.className = 'selected-div' : e.className = 'hidden'
+        flag = !flag
+    })
 })
-
