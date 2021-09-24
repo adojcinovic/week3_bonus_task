@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    background: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+@media only screen and (max-width: 812px) {
+    body {
+        height: 100%;
+    }
+    .img {
+        position: absolute;
+        background-image: url(./images/illustration-woman-online-mobile.svg), url(./figma/top_box_mobile.svg);
+        background-repeat: no-repeat;
+        background-position: center, 100% 90%;
+
+        width: 266px;
+        height: 250px;
+        top: -137px;
+        left: -19px;
+        right: 0;
+        margin: 0 auto;
+    }
+    .card {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 80%;
+        background-color: white;
+        box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+        border-radius: 23px;
+        margin-top: 150px;
+        margin-bottom: 100px;
+        padding: 15px;
+    }
+    .left_side{
+        display: none;
+    }
+
+
+    .right_side {
+        position: static;
+        left: 11%;
+        top: 31%;
+        width: 100%;
+        height: auto;
+        min-height: 70vh;
+        padding-top: 90px;
+        padding-bottom: 20px;
+    }
+    .faq {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+        padding: 5px;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 813px) {
+    .card {
+        position: relative;
+        width: 63%;
+        height: 60%;
+        background-color: white;
+        box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+        border-radius: 23px;
+    }
+    
+    .shadow_box {
+        display: none;
+    }
+
+    .woman_mobile {
+        display: none;
+    }
+
+    .woman_desktop {
+        position: absolute;
+        bottom: 14%;
+        z-index: 1;
+        width: 45%;;
+    }
+    .shadow_box_desktop {
+        position: absolute;
+        width: 45%;
+        bottom: -60px;
+        left: 0;
+        z-index: 1;
+    }
+    .top_ring {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 45%;
+    }
+    .bottom_ring {
+        position: absolute;
+        z-index: 0;
+        width: 45%;
+    }
+    .at_box {
+        position: absolute;
+        left: -5%;
+        width: 15%;
+        bottom: 28%;
+        z-index: 1;
+    }
+    .right_side {
+        position: absolute;
+        right: 3%;
+        top: 18%;
+        font-size: 12px;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+    .faq {
+        font-size: 32px;
+        font-weight: 700;
+    }
+}
+
+
+
+
+span {
+    cursor: pointer;
+}
+
+.question {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #787887;
+    font-size: 12px;
+}
+
+.hidden .question:hover, .bottom_border .question:hover{
+    color: orange;
+    font-weight: 400;
+}
+
+.answer {
+    padding-bottom: 10px;
+    display: none;
+    color: #787887;
+    font-size: 12px;
+}
+
+.selected-div, .hidden, .bottom_border {
+    border-bottom: hsl(240, 5%, 91%) solid 1px;
+}
+
+.hidden .answer{
+    display: none;
+}
+
+.selected-div p {
+    font-weight: bold;
+    color: black;
+}
+.selected-div span {
+    transform: rotate(180deg);
+}
+.selected-div .answer {
+    display: block;
+}
