@@ -2,10 +2,10 @@ var array = [...document.querySelectorAll('#box')]
 
 console.log(box);
 
-array.forEach((e) => {
+array.forEach((element) => {
     var flag = true
-    e.addEventListener('click', () => {
-        flag ? e.className = 'selected-div' : e.className = 'hidden'
+    element.addEventListener('click', () => {
+        flag ? element.className = 'selected-div' : element.className = 'hidden'
         flag = !flag
     })
 })
